@@ -1,5 +1,5 @@
-**BookNest
-**
+BookNest
+
 BookNest is a simple and responsive online bookstore developed using HTML, CSS, and JavaScript. It provides a user-friendly platform to explore books from different categories, view book details, manage a shopping cart, and place demo orders.
 
 This is my first web development project, created to apply my frontend development knowledge and gain practical experience in building a complete website.
@@ -35,9 +35,9 @@ CSS3
 JavaScript
 
 LocalStorage
-**Live Demo Link:** https://booknest07.vercel.app
+Live Demo Link: https://booknest07.vercel.app
 
-**Important Note**
+Important Note
 
 BookNest is currently a frontend-only demonstration project. It uses browser LocalStorage to store books, cart items, wishlist items, user information, and orders.
 
