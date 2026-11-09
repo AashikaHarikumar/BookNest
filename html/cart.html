@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | BookNest</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Book<span>Nest.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-link">
+                    🛒 Cart <span id="cartCount">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart -->
+    <main class="cart-page">
+
+        <div class="cart-heading">
+            <p>YOUR SHOPPING BAG</p>
+            <h1>Shopping Cart</h1>
+            <span>Review your selected books before checkout.</span>
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- Cart Items -->
+            <section class="cart-items-section">
+
+                <div class="cart-section-title">
+                    <h2>Your Books</h2>
+                    <span id="itemCount">0 items</span>
+                </div>
+
+                <div id="cartItems">
+                    <!-- Cart items displayed using JavaScript -->
+                </div>
+
+                <a href="books.html" class="continue-btn">
+                    ← Continue Shopping
+                </a>
+
+            </section>
+
+            <!-- Order Summary -->
+            <aside class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Items</span>
+                    <span id="summaryItems">0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="delivery">₹0</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="total">₹0</span>
+                </div>
+
+                <button id="checkoutBtn" class="checkout-btn">
+                    Proceed to Checkout →
+                </button>
+
+                <p class="secure-text">
+                    Secure checkout experience
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>BookNest.</h2>
+            <p>Your next favourite book is just a click away.</p>
+            <p class="copyright">
+                © 2026 BookNest. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/cart.js"></script>
+
+</body>
+</html>

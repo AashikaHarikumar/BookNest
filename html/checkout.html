@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | BookNest</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2 class="logo">BookNest</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <main class="checkout-container">
+        <h1>Checkout</h1>
+
+        <form id="checkoutForm">
+            <div class="checkout-form">
+                <h2>Delivery Details</h2>
+
+                <label for="customerName">Full Name</label>
+                <input type="text" id="customerName" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" rows="4" required></textarea>
+
+                <label for="payment">Payment Method</label>
+                <select id="payment" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="Cash on Delivery">Cash on Delivery</option>
+                    <option value="Demo Online Payment">Demo Online Payment</option>
+                </select>
+
+                <button type="submit">Place Order</button>
+            </div>
+
+            <div class="checkout-summary">
+                <h2>Order Summary</h2>
+                <div id="checkoutItems"></div>
+                <p>Subtotal: ₹<span id="checkoutSubtotal">0</span></p>
+                <p>Delivery: ₹<span id="checkoutDelivery">0</span></p>
+                <h3>Total: ₹<span id="checkoutTotal">0</span></h3>
+            </div>
+        </form>
+    </main>
+
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

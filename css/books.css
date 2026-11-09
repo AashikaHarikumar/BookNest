@@ -1,0 +1,185 @@
+
+/* Catalogue Page */
+
+.catalogue {
+    padding: 60px 7%;
+    min-height: 80vh;
+}
+
+.catalogue-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.catalogue-heading p {
+    color: #d98255;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.catalogue-heading h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.catalogue-heading span {
+    color: #777;
+    font-size: 15px;
+}
+
+/* Search and Filters */
+
+.catalogue-tools {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.catalogue-tools input,
+.catalogue-tools select {
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.catalogue-tools input {
+    flex: 2;
+    min-width: 180px;
+}
+
+.catalogue-tools select {
+    flex: 1;
+    min-width: 150px;
+}
+
+.catalogue-tools input:focus,
+.catalogue-tools select:focus {
+    border-color: #d98255;
+}
+
+.result-count {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Book Grid */
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.catalogue-book {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.catalogue-book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.catalogue-book img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f4f0e9;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.catalogue-book h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.catalogue-book .author {
+    color: #777;
+    font-size: 13px;
+}
+
+.catalogue-book .category {
+    display: inline-block;
+    background: #f0e9dd;
+    color: #805638;
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.catalogue-book .rating {
+    color: #e6a23c;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.catalogue-book .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.catalogue-book button {
+    width: 100%;
+    padding: 11px;
+    background: #24334a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.catalogue-book button:hover {
+    background: #d98255;
+}
+
+.no-books {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #777;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalogue-tools {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogue-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogue-tools {
+        flex-direction: column;
+    }
+
+    .catalogue-tools input,
+    .catalogue-tools select {
+        width: 100%;
+    }
+
+    .catalogue-heading h1 {
+        font-size: 29px;
+    }
+}

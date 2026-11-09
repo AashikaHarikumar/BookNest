@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookNest | Online Bookstore</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <h2 class="logo">BookNest</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </div>
+
+        <div class="nav-actions">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search books..."
+            >
+
+            <a href="wishlist.html">♡ Wishlist</a>
+
+            <a href="cart.html" class="cart-link">
+                🛒 Cart <span id="cartCount">0</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <h1>Discover Your Next Favourite Book</h1>
+
+            <p>
+                Your next favourite book is just a click away.
+                Explore academic books, novels, technical books
+                and competitive exam materials.
+            </p>
+
+            <a href="books.html" class="hero-btn">
+                Explore Books
+            </a>
+        </div>
+
+    </section>
+
+    <section class="categories" id="categories">
+
+        <h2>Explore Categories</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <h3>Academic Books</h3>
+                <p>Books for learning and education.</p>
+                <a href="books.html">Explore</a>
+            </div>
+
+            <div class="category-card">
+                <h3>Novels</h3>
+                <p>Discover interesting stories.</p>
+                <a href="books.html">Explore</a>
+            </div>
+
+            <div class="category-card">
+                <h3>Technical Books</h3>
+                <p>Improve your technical knowledge.</p>
+                <a href="books.html">Explore</a>
+            </div>
+
+            <div class="category-card">
+                <h3>Competitive Exams</h3>
+                <p>Prepare for your next examination.</p>
+                <a href="books.html">Explore</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="featured-section">
+
+        <h2>Featured Books</h2>
+
+        <div class="book-container" id="bookContainer"></div>
+
+        <div class="view-all">
+            <a href="books.html">View All Books</a>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <h2>About BookNest</h2>
+
+        <p>
+            BookNest is an online bookstore designed to help readers
+            discover and explore books across different categories.
+            Find your favourite books and keep them in one place.
+        </p>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 BookNest. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+
+</body>
+</html>

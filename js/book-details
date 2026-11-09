@@ -1,0 +1,81 @@
+
+const selectedId = localStorage.getItem("selectedBookId");
+
+const book = getBookById(selectedId);
+
+const detailsContainer = document.getElementById("bookDetails");
+
+function displayBookDetails() {
+
+    if (!book) {
+
+        detailsContainer.innerHTML = `
+            <div>
+                <h2>Book not found!</h2>
+                <a href="books.html">Browse Books</a>
+            </div>
+        `;
+
+        return;
+    }
+
+    detailsContainer.innerHTML = `
+
+        <img
+            class="details-cover"
+            src="https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg"
+            alt="${book.title}"
+            onerror="this.onerror=null;this.src='https://placehold.co/300x420?text=Book+Cover';"
+        >
+
+        <div class="details-info">
+
+            <h1>${book.title}</h1>
+
+            <p>By ${book.author}</p>
+
+            <p class="details-category">${book.category}</p>
+
+            <p>⭐ ${book.rating} / 5</p>
+
+            <p class="details-price">₹${book.price}</p>
+
+            <h3>About this book</h3>
+
+            <p>${book.description}</p>
+
+            <button id="addToCartBtn">
+                Add to Cart
+            </button>
+
+            <button id="addToWishlistBtn">
+                ♡ Add to Wishlist
+            </button>
+
+            <button id="backToBooksBtn">
+                Back to Books
+            </button>
+
+        </div>
+    `;
+
+    document.getElementById("addToCartBtn")
+        .addEventListener("click", () => {
+            addBookToCart(book);
+            updateCartCount();
+        });
+
+    document.getElementById("addToWishlistBtn")
+        .addEventListener("click", () => {
+            addBookToWishlist(book);
+        });
+
+    document.getElementById("backToBooksBtn")
+        .addEventListener("click", () => {
+            window.location.href = "books.html";
+        });
+}
+
+displayBookDetails();
+
+updateCartCount();

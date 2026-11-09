@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books | BookNest</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/books.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <h2 class="logo">BookNest</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="index.html#about">About</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-link">
+                🛒 Cart <span id="cartCount">0</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <section class="catalogue-section">
+
+        <div class="catalogue-heading">
+            <h1>Explore Our Books</h1>
+            <p>Find your next favourite book at BookNest.</p>
+        </div>
+
+        <div class="filter-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by book title or author..."
+            >
+
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Academic">Academic</option>
+                <option value="Novel">Novels</option>
+                <option value="Technical">Technical</option>
+                <option value="Competitive Exams">Competitive Exams</option>
+                <option value="Self-help">Self-help</option>
+            </select>
+
+            <select id="sortBooks">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+            </select>
+
+        </div>
+
+        <p id="resultCount"></p>
+
+        <div class="catalogue-grid" id="catalogueGrid"></div>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 BookNest. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/books.js"></script>
+
+</body>
+</html>
